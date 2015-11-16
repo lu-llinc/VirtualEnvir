@@ -36,6 +36,19 @@ EOF
 sudo apt-get install python-pip <<-EOF
 yes
 EOF
+echo 'installing matplotlib, cython, numpy & scypi...' 
+sudo apt-get build-dep python-matplotlib <<-EOF
+yes
+EOF
+sudo apt-get install python-numpy <<-EOF
+yes
+EOF
+sudo apt-get install cython <<-EOF
+yes
+EOF
+sudo apt-get install python-scipy <<-EOF
+yes
+EOF
 echo "Installing htop..."
 sudo apt-get install htop <<-EOF
 yes
