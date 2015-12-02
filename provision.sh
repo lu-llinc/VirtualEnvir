@@ -108,7 +108,7 @@ echo "Installing R packages..."
 sudo R CMD BATCH /vagrant/InstallRpackages.R
 
 echo "Installing rJava..."
-apt-get install r-cran-rjava
+sudo apt-get install r-cran-rjava
 
 echo "Installing Ipython Notebook..."
 sudo apt-get install ipython-notebook <<-EOF
