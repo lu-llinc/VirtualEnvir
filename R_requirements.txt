@@ -1,10 +1,9 @@
-## Requirements for Rstudio server environment
-
+devtools
 ggplot2
 countrycode
 data.table
 lubridate
-devtools
+plyr
 dplyr
 foreach
 RSQLite

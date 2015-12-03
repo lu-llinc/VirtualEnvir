@@ -4,7 +4,7 @@
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' |
-tee /etc/apt/sources.list.d/mongodb.list
+sudo tee /etc/apt/sources.list.d/mongodb.list
 
 # Update
 sudo apt-get update
@@ -34,6 +34,19 @@ sudo apt-get install python-dev <<-EOF
 yes
 EOF
 sudo apt-get install python-pip <<-EOF
+yes
+EOF
+echo 'installing matplotlib, cython, numpy & scypi...' 
+sudo apt-get build-dep python-matplotlib <<-EOF
+yes
+EOF
+sudo apt-get install python-numpy <<-EOF
+yes
+EOF
+sudo apt-get install cython <<-EOF
+yes
+EOF
+sudo apt-get install python-scipy <<-EOF
 yes
 EOF
 echo "Installing htop..."
@@ -95,7 +108,7 @@ echo "Installing R packages..."
 sudo R CMD BATCH /vagrant/InstallRpackages.R
 
 echo "Installing rJava..."
-apt-get install r-cran-rjava
+sudo apt-get install r-cran-rjava
 
 echo "Installing Ipython Notebook..."
 sudo apt-get install ipython-notebook <<-EOF
